@@ -1,0 +1,24 @@
+﻿<Window x:Class="HandleKeyDown.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HandleKeyDown"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400"
+        PreviewKeyDown="Window_PreviewKeyDown">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="Required01" Grid.Row="0" Content="обязательное поле" Background="LightGray"/>
+        <Label Grid.Row="1" Content="НЕ обязательное поле" Background="LightGray"/>
+        <Label x:Name="Required02" Grid.Row="2" Content="обязательное поле" Background="LightGray"/>
+        <Label Grid.Row="3" Content="НЕ обязательное поле" Background="LightGray"/>
+        <Label x:Name="Required03" Grid.Row="4" Content="обязательное поле" Background="LightGray"/>
+    </Grid>
+</Window>
