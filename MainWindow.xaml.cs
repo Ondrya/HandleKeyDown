@@ -37,7 +37,19 @@ namespace HandleKeyDown
                 foreach (var item in RequiredFields)
                 {
                     var label = (Label)this.FindName(item);
-                    label.Background = label.Background == Brushes.OrangeRed ? Brushes.LightGray : Brushes.OrangeRed;
+                    label.Background = Brushes.OrangeRed;
+                }
+            }
+        }
+
+        private void Window_PreviewKeyUp(object sender, KeyEventArgs e)
+        {
+            if (Keyboard.IsKeyUp(Key.LeftCtrl) || Keyboard.IsKeyUp(Key.RightCtrl))
+            {
+                foreach (var item in RequiredFields)
+                {
+                    var label = (Label)this.FindName(item);
+                    label.Background = Brushes.LightGray;
                 }
             }
         }
